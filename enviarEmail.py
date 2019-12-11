@@ -36,7 +36,7 @@ def enviar():
 
         server = smtplib.SMTP('SMTP.office365.com', 587) #servidor e porta do do seu email
         server.starttls()
-        server.login(De, 'Infra2020') #seu email e senha
+        server.login(De, 'suaSenha') #seu email e senha
         text = msg.as_string() #convertendo a mensagem para string
         server.sendmail(De, list, text) #enviando o email
         server.quit() #fechando o serviço
