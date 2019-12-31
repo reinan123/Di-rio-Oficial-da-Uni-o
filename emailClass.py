@@ -12,7 +12,7 @@ def enviar():
     try:
         list = [lista de emails]
         destinatario = ','.join(list) #transformando a lista em string
-        De = 'reinan.oliveira@infraestrutura.gov.br' #seu email
+        De = 'seu email' #seu email
 
         msg = MIMEMultipart()
         msg['From'] = De #cabeçalho
