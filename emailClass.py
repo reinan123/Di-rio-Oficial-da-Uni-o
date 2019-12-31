@@ -10,13 +10,7 @@ def enviar():
     os.chdir ('\\\\fs\\Departamentos\\SNTTA\\DTROD\\CGGR\\05 - Projetos\\Robo Diario Oficial Uniao\\Dados DOU') #caminho onde o arquivo está salvo
     now = datetime.now()
     try:
-        list = ['anibal.almeida@infraestrutura.gov.br', 'reinan-rp@hotmail.com', 'luciano.campos@infraestrutura.gov.br',          #lista de destinatários
-                'ademir.oliveira@infraestrutura.gov.br', 'amanda.marinho@infraestrutura.gov.br', 'constantino.junior@infraestrutura.gov.br', 'roger.pegas@infraestrutura.gov.br',
-                'erick.galeno@infraestrutura.gov.br', 'helen.rezende@infraestrutura.gov.br', 'herik.lopes@infraestrutura.gov.br', 'izabel.moreira@infraestrutura.gov.br',
-                'jaciara.ximenes@infraestrutura.gov.br', 'jorge.conceicao@infraestrutura.gov.br', 'jose.t.oliveira@infraestrutura.gov.br', 'katia.tancon@infraestrutura.gov.br',
-                'leonardo.rabelo@infraestrutura.gov.br', 'livia.fujii@infraestrutura.gov.br', 'luciano.lourenco@infraestrutura.gov.br', 'luciely.martins@infraestrutura.gov.br',
-                'marcelo.gottardello@infraestrutura.gov.br', 'mariacunha.ribeiro@infraestrutura.gov.br', 'nicolli.iacobucci@infraestrutura.gov.br', 'roberto.silva@infraestrutura.gov.br']
-        #list = ['reinan-rp@hotmail.com']
+        list = [lista de emails]
         destinatario = ','.join(list) #transformando a lista em string
         De = 'reinan.oliveira@infraestrutura.gov.br' #seu email
 
@@ -49,7 +43,7 @@ def enviar():
 
         server = smtplib.SMTP('SMTP.office365.com', 587) #servidor e porta do do seu email
         server.starttls()
-        server.login(De, 'Infra2020') #seu email e senha
+        server.login(De, 'sua senha') #seu email e senha
         text = msg.as_string() #convertendo a mensagem para string
         server.sendmail(De, list, text) #enviando o email
         server.quit() #fechando o serviço
